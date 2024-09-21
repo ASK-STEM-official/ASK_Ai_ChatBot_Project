@@ -28,6 +28,23 @@
 - Web側はSpring(Java)をサーバーサイドとして、フロント側はHTML/CSS/JavaScriptを使いテンプレートはThymeleafとする。
 - 入力されたテキストをUTF-8にエンコードし、API側にリクエストを送信し、AIのAPIにリクエストを送信する。
 
-![](./img/system_architecture.png) <!--Draw.ioなどで作成予定-->
+![](../images/Ai_Chat_System.drawio.png)
 
 Python単体ではリクエストのタイムアウトが早すぎてお話にならないのでSpringをはさむ
+
+### AIの調整
+
+- RAG手法を用いて、AIに文書、ポスター等の知識をデータベース化したデータをもとに推論を行う。データのベクトル化は自作したプログラムを介し行う。
+- 保存されるデータは題、内容、文書、年月日、ベクトル
+- データの保存用のアプリケーションを用いてベクトル化する。
+- STEM研究部、理工科と学習させていき、最終的には全体へと保存データを増やしていく。
+
+## ER図
+
+![](../images/Ai_Chat_ER.drawio.png)
+
+## ユースケース図
+
+![](../images/Ai_Chat_UseCase.drawio.png)
+
+## クラス図
